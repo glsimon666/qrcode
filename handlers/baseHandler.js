@@ -10,9 +10,8 @@ class BaseScanner {
         return await puppeteer.launch({
             args: chromium.args,
             defaultViewport: chromium.defaultViewport,
-            executablePath: await chromium.executablePath(),
+            executablePath: await chromium.executablePath(), // 确保有 await
             headless: chromium.headless,
-            ignoreHTTPSErrors: true,
         });
     }
 
