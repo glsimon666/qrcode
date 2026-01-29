@@ -1,10 +1,20 @@
+[build]
+  command = "npm install"
+  functions = "netlify/functions"
+
 [[redirects]]
-  from = "/auth/*"
+  from = "/139"
+  to = "/.netlify/functions/auth"
+  query = {drive = "139"}
+  status = 200
+
+# 通用规则：访问 /api/xxx 转发到函数
+[[redirects]]
+  from = "/api/:drive"
   to = "/.netlify/functions/auth"
   status = 200
 
-# 如果你想直接通过 域名/139 调用
 [[redirects]]
-  from = "/api/:drive"
-  to = "/.netlify/functions/auth/:drive"
+  from = "/*"
+  to = "/index.html"
   status = 200
