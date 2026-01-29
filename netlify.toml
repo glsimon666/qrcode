@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "/auth/*"
+  to = "/.netlify/functions/auth"
+  status = 200
+
+# 如果你想直接通过 域名/139 调用
+[[redirects]]
+  from = "/api/:drive"
+  to = "/.netlify/functions/auth/:drive"
+  status = 200
