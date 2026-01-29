@@ -1,6 +1,6 @@
 const { stream } = require('@netlify/functions');
-const chromium = require('chrome-aws-lambda');
-const puppeteer = require('puppeteer-core');
+const BaseScanner = require('../../handlers/baseHandler');
+const { stream } = require('@netlify/functions');
 
 // 导入处理器
 const handlers = {
